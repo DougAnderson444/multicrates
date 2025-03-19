@@ -8,6 +8,7 @@ version = "0.1.0"
 edition = "2021"
 
 [workspace.dependencies]
+multicrates = { path = "." }
 multibase = { path = "crates/multibase" }
 multicodec = { path = "crates/multicodec" }
 multihash = { path = "crates/multihash" }
@@ -16,9 +17,18 @@ multitrait = { path = "crates/multitrait" }
 multiutil = { path = "crates/multiutil" }
 
 [dependencies]
-multibase = { workspace = true }
-multicodec = { workspace = true }
-multihash = { workspace = true }
-multisig = { workspace = true }
-multitrait = { workspace = true }
-multiutil = { workspace = true }
+multibase = { workspace = true, optional = true }
+multicodec = { workspace = true, optional = true }
+multihash = { workspace = true, optional = true }
+multisig = { workspace = true, optional = true }
+multitrait = { workspace = true, optional = true }
+multiutil = { workspace = true, optional = true }
+
+[features]
+multibase = ["dep:multibase"]
+multicodec = ["dep:multicodec"]
+multihash = ["dep:multihash"]
+multisig = ["dep:multisig"]
+multitrait = ["dep:multitrait"]
+multiutil = ["dep:multiutil"]
+default = []
