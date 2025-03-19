@@ -1,0 +1,17 @@
+[package]
+name = "multitrait"
+version = "1.0.1"
+edition = "2021"
+authors = ["Dave Grantham <dwg@linuxprogrammer.org>"]
+description = "Common traits for multiformats types"
+repository = "https://github.com/cryptidtech/multitrait.git"
+readme = "README.md"
+license = "Apache-2.0"
+
+[features]
+default = ["std"]
+std = ["unsigned-varint/std"]
+
+[dependencies]
+thiserror = { version = "1.0", default-features = false }
+unsigned-varint = { version = "0.8", default-features = false }

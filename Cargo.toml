@@ -1,0 +1,24 @@
+[workspace]
+members = [".", "crates/*", "crates/multibase/cli"]
+resolver = "2"
+
+[package]
+name = "multicrates"
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+multibase = { path = "crates/multibase" }
+multicodec = { path = "crates/multicodec" }
+multihash = { path = "crates/multihash" }
+multisig = { path = "crates/multisig" }
+multitrait = { path = "crates/multitrait" }
+multiutil = { path = "crates/multiutil" }
+
+[dependencies]
+multibase = { workspace = true }
+multicodec = { workspace = true }
+multihash = { workspace = true }
+multisig = { workspace = true }
+multitrait = { workspace = true }
+multiutil = { workspace = true }

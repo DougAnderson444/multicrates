@@ -1,0 +1,27 @@
+[package]
+name = "multiutil"
+version = "1.0.15"
+edition = "2021"
+authors = ["Dave Huseby <dwh@linuxprogrammer.org>"]
+description = "Multiformat utility functions and types"
+repository = "https://github.com/cryptidtech/multiutil.git"
+readme = "README.md"
+license = "Apache-2.0"
+
+[features]
+default = ["serde"]
+
+[dependencies]
+multibase = { workspace = true }
+multicodec = { workspace = true }
+multitrait = { workspace = true }
+serde = { version = "1.0", default-features = false, features = [
+  "alloc",
+], optional = true }
+thiserror = "1.0"
+
+[dev-dependencies]
+hex = "0.4"
+serde_cbor = "0.11"
+serde_json = "1.0"
+serde_test = "1.0"
