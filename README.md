@@ -13,6 +13,13 @@ This repo combines multiple crates into a single workspace to make the dependenc
 
 ## Usage
 
+Enable the crate you need with a feature flag:
+
+```toml
+[dependencies]
+multicrates = { version = "*", features = ["multibase", "multicodec", "multihash", "multisig", "multitrait", "multiutil"] }
+```
+
 To use the member crates, import the re-export:
 
 ```rust
