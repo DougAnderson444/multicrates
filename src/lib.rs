@@ -1,4 +1,7 @@
 //! Multicrates library re-exporting all member crates.
+//!
+#![doc = include_str!("../README.md")]
+//!
 
 // Re-export all member crates with feature flags
 #[cfg(feature = "multibase")]
@@ -69,4 +72,3 @@ pub mod prelude {
 
 /// Version of the crate
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");
-
