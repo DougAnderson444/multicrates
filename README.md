@@ -23,5 +23,9 @@ multicrates = { version = "*", features = ["multibase", "multicodec", "multihash
 To use the member crates, import the re-export:
 
 ```rust
+// individual crates
 use multicrates::{multibase, multicodec, multihash, multisig, multitrait, multiutil};
+
+// or, using the prelude 
+use multicrates::prelude::*;
 ```
